@@ -5,8 +5,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M120Projekt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="509" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Einzelansicht" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15" FontSize="18" Grid.Row="0" MinHeight="30"/>
+
+        <Grid Grid.Row="1" Width="500" Height="400" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Margin="5" Grid.Row="0" Orientation="Horizontal">
+                <Label Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="Tom Clancy's Rainbow Six Siege" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Margin="5" Grid.Row="1" Orientation="Horizontal">
+                <Label Content="Publisher:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="Ubisoft" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Margin="5" Grid.Row="2" Orientation="Horizontal">
+                <Label Content="Bild-Pfad:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="NULL" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Margin="5" Grid.Row="3" Orientation="Horizontal">
+                <Label Content="Erscheinungsdatum:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="2015" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Margin="5" Grid.Row="4" Orientation="Horizontal">
+                <Label Content="Mindestalter:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Margin="5" Grid.Row="5" Orientation="Horizontal">
+                <Label Content="Preis:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="77.99 CHF" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Margin="5" Grid.Row="6" Orientation="Horizontal">
+                <Label Content="Steam:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="Ja" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Margin="5" Grid.Row="7" Orientation="Horizontal">
+                <Label Content="Bewertung:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="5 Sterne" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+            <DockPanel Margin="5" Grid.Row="8">
+                <Button Content="Ändern" HorizontalAlignment="Left" Width="70"/>
+                <Button Content="Löschen" HorizontalAlignment="Right" Width="70"/>
+            </DockPanel>
+        </Grid>
+
     </Grid>
 </Window>

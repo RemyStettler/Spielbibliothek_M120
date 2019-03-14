@@ -3,7 +3,7 @@
   <Class Name="M120Projekt.Data.SpielBibliothek">
     <Position X="2" Y="0.75" Width="4.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAAABAAAEAAgAAIAAAgAABEQAIAAAAQCAAEA=</HashCode>
+      <HashCode>AAACAAAIAAAAAAAECCgAAIQAACAABkUAQAAAIACAAEA=</HashCode>
       <FileName>Data\SpielBibliothek.cs</FileName>
     </TypeIdentifier>
   </Class>

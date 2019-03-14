@@ -29,6 +29,8 @@ namespace M120Projekt.Data
         public Boolean IstSteam { get; set; }
         [Required]
         public Int64 Bewertung { get; set; }
+        [Required]
+        public DateTime created_at { get; set; }
         #endregion
         #region Applikationsschicht
         public SpielBibliothek() { }

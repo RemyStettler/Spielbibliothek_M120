@@ -24,14 +24,15 @@ namespace M120Projekt
             SpielBibliothek1.Preis = 77.99;
             SpielBibliothek1.IstSteam = false;
             SpielBibliothek1.Bewertung = 5;
+            SpielBibliothek1.created_at = DateTime.Today;
             Int64 SpielBibliothek1Id = SpielBibliothek1.Erstellen();
             Debug.Print("Artikel erstellt mit Id:" + SpielBibliothek1Id);
         }
         public static void DemoACreateKurz()
         {
-            Data.SpielBibliothek SpielBibliothek2 = new Data.SpielBibliothek { Name = "Artikel 2", IstSteam = true, Erscheinungsdatum = DateTime.Today };
-            Int64 SpielBibliothek2Id = SpielBibliothek2.Erstellen();
-            Debug.Print("Artikel erstellt mit Id:" + SpielBibliothek2Id);
+            //Data.SpielBibliothek SpielBibliothek2 = new Data.SpielBibliothek { Name = "Artikel 2", IstSteam = true, Erscheinungsdatum = DateTime.Today };
+            //Int64 SpielBibliothek2Id = SpielBibliothek2.Erstellen();
+            //Debug.Print("Artikel erstellt mit Id:" + SpielBibliothek2Id);
         }
 
         // Read
