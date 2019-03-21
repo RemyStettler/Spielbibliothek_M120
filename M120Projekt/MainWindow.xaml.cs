@@ -34,5 +34,11 @@ namespace M120Projekt
             //APIDemo.DemoARead();
             //APIDemo.DemoADelete();
         }
+
+        private void BtnEvent_Click(object sender, RoutedEventArgs e)
+        {
+            string temp = txtBox.Text;
+            lblOutput.Content = temp;
+        }
     }
 }
