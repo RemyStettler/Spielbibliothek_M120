@@ -61,22 +61,54 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserControls\Einzelansicht.xaml.cs">
+      <DependentUpon>Einzelansicht.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Listenansicht.xaml.cs">
+      <DependentUpon>Listenansicht.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Neuansicht.xaml.cs">
+      <DependentUpon>Neuansicht.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Ändernansicht.xaml.cs">
+      <DependentUpon>Ändernansicht.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="APIDemo.cs" />
+    <Compile Include="API.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Data\Global.cs" />
-    <Compile Include="Data\SpielBibliothek.cs" />
+    <Compile Include="Data\Spiel.cs" />
     <Compile Include="Data\Context.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ResorceDictionarys\Style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Einzelansicht.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Listenansicht.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Neuansicht.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Ändernansicht.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\Configuration.cs" />

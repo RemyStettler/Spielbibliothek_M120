@@ -16,8 +16,8 @@ namespace M120Projekt.Data
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<SpielBibliothek>().ToTable("SpielBibliothek"); // Damit kein "s" angehängt wird an Tabelle
+            modelBuilder.Entity<Spiel>().ToTable("SpielBibliothek"); // Damit kein "s" angehängt wird an Tabelle
         }
-        public DbSet<SpielBibliothek> SpielBibliothek { get; set; }
+        public DbSet<Spiel> SpielBibliothek { get; set; }
     }
 }

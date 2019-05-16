@@ -9,7 +9,7 @@ using System.Data.Entity;
 
 namespace M120Projekt.Data
 {
-    public class SpielBibliothek
+    public class Spiel
     {
         #region Datenbankschicht
         [Key]
@@ -33,7 +33,7 @@ namespace M120Projekt.Data
         public DateTime created_at { get; set; }
         #endregion
         #region Applikationsschicht
-        public SpielBibliothek() { }
+        public Spiel() { }
         [NotMapped]
         public String BerechnetesAttribut
         {
@@ -42,19 +42,20 @@ namespace M120Projekt.Data
                 return "Im Getter kann Code eingefügt werden für berechnete Attribute";
             }
         }
-        public static IEnumerable<Data.SpielBibliothek> LesenAlle()
+        public static IEnumerable<Data.Spiel> LesenAlle()
         {
+            IEnumerable<Spiel> games = from record in Global.context.SpielBibliothek select record;
             return (from record in Data.Global.context.SpielBibliothek select record);
         }
-        public static Data.SpielBibliothek LesenID(Int64 SpielBibliothekId)
+        public static Data.Spiel LesenID(Int64 SpielBibliothekId)
         {
             return (from record in Data.Global.context.SpielBibliothek where record.Id == SpielBibliothekId select record).FirstOrDefault();
         }
-        public static IEnumerable<Data.SpielBibliothek> LesenAttributGleich(String suchbegriff)
+        public static IEnumerable<Data.Spiel> LesenAttributGleich(String suchbegriff)
         {
             return (from record in Data.Global.context.SpielBibliothek where record.Name == suchbegriff select record);
         }
-        public static IEnumerable<Data.SpielBibliothek> LesenAttributWie(String suchbegriff)
+        public static IEnumerable<Data.Spiel> LesenAttributWie(String suchbegriff)
         {
             return (from record in Data.Global.context.SpielBibliothek where record.Name.Contains(suchbegriff) select record);
         }

@@ -16,18 +16,27 @@ using System.Windows.Shapes;
 
 namespace M120Projekt
 {
+    using UserControls;
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public static Label Label { get; set; }
+
+        public static Grid UCContainer { get; set; }
+        public static Button BackButton { get; set; }
         public MainWindow()
         {
             InitializeComponent();
             // Wichtig!
             Data.Global.context = new Data.Context();
+            Label = lblHeader;
+            UCContainer = usercontrolContainer;
+            UCContainer.Children.Add(new Listenansicht());
             //Aufruf diverse APIDemo Methoden
-            //APIDemo.DemoACreate();
+            //API.DemoACreate();
             //APIDemo.DemoACreateKurz();
             //APIDemo.DemoARead();
             //APIDemo.DemoAUpdate();
@@ -37,8 +46,7 @@ namespace M120Projekt
 
         private void BtnEvent_Click(object sender, RoutedEventArgs e)
         {
-            string temp = txtBox.Text;
-            lblOutput.Content = temp;
+
         }
     }
 }

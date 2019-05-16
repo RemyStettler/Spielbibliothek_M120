@@ -5,76 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M120Projekt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="845" Width="800">
+        Title="MainWindow" Height="695" Width="742"
+        xmlns:controls="clr-namespace:M120Projekt.UserControls">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="4*"/>
+            <RowDefinition Height="6*"/>
         </Grid.RowDefinitions>
-
-        <Label Content="Einzelansicht" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,24,0,23" FontSize="18" Grid.Row="0" MinHeight="30" Height="Auto" Width="Auto"/>
-
-        <Grid Grid.Row="1" Height="400" VerticalAlignment="Top" Margin="146,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
-            <StackPanel Margin="5" Grid.Row="0" Orientation="Horizontal">
-                <Label Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Label Content="Tom Clancy's Rainbow Six Siege" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
-
-            <StackPanel Margin="5" Grid.Row="1" Orientation="Horizontal">
-                <Label Content="Publisher:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Label Content="Ubisoft" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
-            <StackPanel Margin="5" Grid.Row="2" Orientation="Horizontal">
-                <Label Content="Bild-Pfad:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Label Content="NULL" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
-
-            <StackPanel Margin="5" Grid.Row="3" Orientation="Horizontal">
-                <Label Content="Erscheinungsdatum:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Label Content="2015" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
-
-            <StackPanel Margin="5" Grid.Row="4" Orientation="Horizontal">
-                <Label Content="Mindestalter:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Label Content="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
-
-            <StackPanel Margin="5" Grid.Row="5" Orientation="Horizontal">
-                <Label Content="Preis:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Label Content="77.99 CHF" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
-
-            <StackPanel Margin="5" Grid.Row="6" Orientation="Horizontal">
-                <Label Content="Steam:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Label Content="Ja" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
-            <StackPanel Margin="5" Grid.Row="7" Orientation="Horizontal">
-                <Label Content="Bewertung:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Label Content="5 Sterne" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
-            <DockPanel Margin="5" Grid.Row="8">
-                <Button Content="Ändern" HorizontalAlignment="Left" Width="70"/>
-                <Button Content="Löschen" HorizontalAlignment="Right" Width="70"/>
-            </DockPanel>
+        <DockPanel Grid.Row="0">
+            <Label x:Name="lblHeader" Content="" DockPanel.Dock="Left" VerticalAlignment="Center" FontSize="24" Margin="30 5"/>
+        </DockPanel>
+        <Grid x:Name="usercontrolContainer" Grid.Row="1" Background="LightGray" Margin="30">
+            
         </Grid>
-        <StackPanel Grid.Row="2" Height="280" VerticalAlignment="Bottom" Margin="146,0">
-            <Label Content="Event" Width="Auto" Height="Auto" Margin="0 10" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Center"/>
-            <TextBox x:Name="txtBox" Width="100" Height="50" Margin="0 10"/>
-            <Button x:Name="btnEvent" Width="100" Height="50" Margin="0 10" Content="Event auslösen" Click="BtnEvent_Click"/>
-            <Label x:Name="lblOutput" Width="Auto" Height="Auto" Margin="0 10" HorizontalAlignment="Center"/>
-        </StackPanel>
-
     </Grid>
 </Window>
