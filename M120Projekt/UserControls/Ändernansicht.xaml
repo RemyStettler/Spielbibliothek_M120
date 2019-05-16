@@ -57,6 +57,7 @@
                 <TextBox x:Name="txtSterne" Text="5 Sterne" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Padding="5"/>
             </StackPanel>
             <DockPanel Margin="5" Grid.Row="8">
+                <Button Content="Speichern" HorizontalAlignment="Left" Width="70" Click="ButtonSave_Click"></Button>
                 <Button Content="Abbrechen" HorizontalAlignment="Right" Width="70" Click="Button_Click"/>
             </DockPanel>
         </Grid>

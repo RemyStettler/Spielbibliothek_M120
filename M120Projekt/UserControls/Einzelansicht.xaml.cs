@@ -37,7 +37,6 @@ namespace M120Projekt.UserControls
             MessageBoxResult dialog = MessageBox.Show("Dieses Element wirklich Löschen?", "Endgültig löschen?", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if(dialog == MessageBoxResult.Yes)
             {
-                throw new NotImplementedException();
                 MainWindow.UCContainer.Children.Remove(this);
                 MainWindow.UCContainer.Children.Add(new Listenansicht());
             }

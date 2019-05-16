@@ -38,7 +38,6 @@ namespace M120Projekt
             SpielBibliothek1.Name = "Artikel 1";
             SpielBibliothek1.Publisher = "Ubisoft";
             SpielBibliothek1.Erscheinungsdatum = DateTime.Today;
-            SpielBibliothek1.BildPfad = "";
             SpielBibliothek1.Mindestalter = 16;
             SpielBibliothek1.Preis = 77.99;
             SpielBibliothek1.IstSteam = false;
@@ -54,31 +53,31 @@ namespace M120Projekt
             //Debug.Print("Artikel erstellt mit Id:" + SpielBibliothek2Id);
         }
 
-        //// Read
-        //public static void DemoARead()
-        //{
-        //    Debug.Print("--- DemoARead ---");
-        //    // Demo liest alle
-        //    foreach (Data.SpielBibliothek SpielBibliothek in Data.SpielBibliothek.LesenAlle())
-        //    {
-        //        Debug.Print("Artikel Id:" + SpielBibliothek.Id + " Name:" + SpielBibliothek.Name);
-        //    }
-        //}
-        //// Update
-        //public static void DemoAUpdate()
-        //{
-        //    Debug.Print("--- DemoAUpdate ---");
-        //    // SpielBibliothek ändert Attribute
-        //    Data.SpielBibliothek SpielBibliothek1 = Data.SpielBibliothek.LesenID(1);
-        //    SpielBibliothek1.Name = "Artikel 1 nach Update";
-        //    SpielBibliothek1.Aktualisieren();
-        //}
-        //// Delete
-        //public static void DemoADelete()
-        //{
-        //    Debug.Print("--- DemoADelete ---");
-        //    Data.SpielBibliothek.LesenID(1).Loeschen();
-        //    Debug.Print("Artikel mit Id 1 gelöscht");
-        //}
+        // Read
+        public static void DemoARead()
+        {
+            Debug.Print("--- DemoARead ---");
+            // Demo liest alle
+            foreach (Data.Spiel SpielBibliothek in Data.Spiel.LesenAlle())
+            {
+                Debug.Print("Artikel Id:" + SpielBibliothek.Id + " Name:" + SpielBibliothek.Name);
+            }
+        }
+        // Update
+        public static void DemoAUpdate()
+        {
+            Debug.Print("--- DemoAUpdate ---");
+            // SpielBibliothek ändert Attribute
+            Data.Spiel SpielBibliothek1 = Data.Spiel.LesenID(1);
+            SpielBibliothek1.Name = "Artikel 1 nach Update";
+            SpielBibliothek1.Aktualisieren();
+        }
+        // Delete
+        public static void DemoADelete()
+        {
+            Debug.Print("--- DemoADelete ---");
+            Data.Spiel.LesenID(1).Loeschen();
+            Debug.Print("Artikel mit Id 1 gelöscht");
+        }
     }
 }

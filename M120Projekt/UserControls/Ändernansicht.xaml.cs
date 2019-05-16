@@ -31,5 +31,11 @@ namespace M120Projekt.UserControls
             MainWindow.UCContainer.Children.Remove(this);
             MainWindow.UCContainer.Children.Add(new Einzelansicht());
         }
+
+        private void ButtonSave_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.UCContainer.Children.Remove(this);
+            MainWindow.UCContainer.Children.Add(new Einzelansicht());
+        }
     }
 }

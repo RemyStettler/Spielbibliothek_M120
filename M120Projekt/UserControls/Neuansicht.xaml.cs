@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 
 namespace M120Projekt.UserControls
 {
+    using Helpers;
     /// <summary>
     /// Interaktionslogik für Neuansicht.xaml
     /// </summary>
@@ -38,7 +39,6 @@ namespace M120Projekt.UserControls
 
         private void FelderLeeren()
         {
-            txtBildPfad.Clear();
             datePicker.SelectedDate = null;
             datePicker.DisplayDate = DateTime.Today;
             txtMindestalter.Clear();
@@ -47,6 +47,72 @@ namespace M120Projekt.UserControls
             txtPublisher.Clear();
             txtBewertung.Clear();
             checkSteam.IsChecked = false;
+        }
+
+        private void TxtName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox txt = sender as TextBox;
+            if (Validation.NameValidieren(txt.Text))
+            {
+                txt.BorderBrush = Brushes.LightGreen;
+            }
+            else
+            {
+                txt.BorderBrush = Brushes.Red;
+            }
+            
+        }
+
+        private void TxtPublisher_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox txt = sender as TextBox;
+            if (Validation.PublisherValidieren(txt.Text))
+            {
+                txt.BorderBrush = Brushes.LightGreen;
+            }
+            else
+            {
+                txt.BorderBrush = Brushes.Red;
+            }
+        }
+
+        private void TxtMindestalter_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox txt = sender as TextBox;
+            if (Validation.MindestalterValidieren(txt.Text))
+            {
+                txt.BorderBrush = Brushes.LightGreen;
+            }
+            else
+            {
+                txt.BorderBrush = Brushes.Red;
+            }
+        }
+
+        private void TxtPreis_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox txt = sender as TextBox;
+            if (Validation.PreisValidieren(txt.Text))
+            {
+                txt.BorderBrush = Brushes.LightGreen;
+            }
+            else
+            {
+                txt.BorderBrush = Brushes.Red;
+            }
+        }
+
+        private void TxtBewertung_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox txt = sender as TextBox;
+            if (Validation.BewertungValidieren(txt.Text))
+            {
+                txt.BorderBrush = Brushes.LightGreen;
+            }
+            else
+            {
+                txt.BorderBrush = Brushes.Red;
+            }
         }
     }
 }

@@ -38,9 +38,9 @@ namespace M120Projekt
             //Aufruf diverse APIDemo Methoden
             //API.DemoACreate();
             //APIDemo.DemoACreateKurz();
-            //APIDemo.DemoARead();
-            //APIDemo.DemoAUpdate();
-            //APIDemo.DemoARead();
+            //API.DemoARead();
+            //API.DemoAUpdate();
+            //API.DemoARead();
             //APIDemo.DemoADelete();
         }
 

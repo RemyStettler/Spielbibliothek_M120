@@ -13,6 +13,7 @@
             <RowDefinition Height="6*"/>
         </Grid.RowDefinitions>
         <DockPanel Grid.Row="0">
+            <Button x:Name="backButton" Content="Back" Width="50" Height="50" Margin="20"></Button>
             <Label x:Name="lblHeader" Content="" DockPanel.Dock="Left" VerticalAlignment="Center" FontSize="24" Margin="30 5"/>
         </DockPanel>
         <Grid x:Name="usercontrolContainer" Grid.Row="1" Background="LightGray" Margin="30">

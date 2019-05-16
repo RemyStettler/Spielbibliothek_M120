@@ -18,47 +18,43 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
             <StackPanel Margin="5" Grid.Row="0" Orientation="Horizontal">
                 <Label Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtName" Width="100" MaxWidth="400" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
+                <TextBox x:Name="txtName" Width="100" MaxWidth="400" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5" TextChanged="TxtName_TextChanged"/>
             </StackPanel>
 
             <StackPanel Margin="5" Grid.Row="1" Orientation="Horizontal">
                 <Label Content="Publisher:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtPublisher" Width="100" MaxWidth="400" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
-            </StackPanel>
-            <StackPanel Margin="5" Grid.Row="2" Orientation="Horizontal">
-                <Label Content="Bild-Pfad:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtBildPfad" Width="100" MaxWidth="400" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
+                <TextBox x:Name="txtPublisher" Width="100" MaxWidth="400" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5" TextChanged="TxtPublisher_TextChanged"/>
             </StackPanel>
 
-            <StackPanel Margin="5" Grid.Row="3" Orientation="Horizontal">
+            <StackPanel Margin="5" Grid.Row="2" Orientation="Horizontal">
                 <Label Content="Erscheinungsdatum:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <DatePicker x:Name="datePicker" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
             </StackPanel>
 
-            <StackPanel Margin="5" Grid.Row="4" Orientation="Horizontal">
+            <StackPanel Margin="5" Grid.Row="3" Orientation="Horizontal">
                 <Label Content="Mindestalter:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtMindestalter" Width="30" MaxLength="2" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
+                <TextBox x:Name="txtMindestalter" Width="30" MaxLength="2" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5" TextChanged="TxtMindestalter_TextChanged"/>
+            </StackPanel>
+
+            <StackPanel Margin="5" Grid.Row="4" Orientation="Horizontal">
+                <Label Content="Preis:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtPreis" Width="75" MaxLength="4" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5" TextChanged="TxtPreis_TextChanged"/>
             </StackPanel>
 
             <StackPanel Margin="5" Grid.Row="5" Orientation="Horizontal">
-                <Label Content="Preis:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtPreis" Width="75" MaxLength="4" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
-            </StackPanel>
-
-            <StackPanel Margin="5" Grid.Row="6" Orientation="Horizontal">
                 <Label Content="Steam:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <CheckBox x:Name="checkSteam" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
-            <StackPanel Margin="5" Grid.Row="7" Orientation="Horizontal">
+            <StackPanel Margin="5" Grid.Row="6" Orientation="Horizontal">
                 <Label Content="Bewertung:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtBewertung" Width="100" MaxLength="10" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
+                <TextBox x:Name="txtBewertung" Width="100" MaxLength="10" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5" TextChanged="TxtBewertung_TextChanged"/>
             </StackPanel>
-            <DockPanel Margin="5" Grid.Row="8">
-                <Button Content="Felder Leeren" HorizontalAlignment="Left" Width="70" Click="Button_Click"/>
+            <DockPanel Margin="5" Grid.Row="7">
+                <Button Content="Erstellen" HorizontalAlignment="Left" Width="70"></Button>
+                <Button Content="Felder Leeren" HorizontalAlignment="Right" Width="70" Click="Button_Click"/>
                 <Button Content="Abbrechen" HorizontalAlignment="Right" Width="70" Click="Button_Click_1"/>
             </DockPanel>
         </Grid>

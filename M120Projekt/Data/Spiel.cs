@@ -18,7 +18,6 @@ namespace M120Projekt.Data
         public String Name { get; set; }
         [Required]
         public String Publisher { get; set; }
-        public String BildPfad { get; set; }
         [Required]
         public DateTime Erscheinungsdatum { get; set; }
         [Required]
