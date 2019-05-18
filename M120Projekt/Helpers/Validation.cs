@@ -6,9 +6,21 @@ using System.Threading.Tasks;
 
 namespace M120Projekt.Helpers
 {
-    public static class Validation
+    public class Validation
     {
-        public static bool NameValidieren(string name)
+        public bool IstName { get; set; }
+
+        public bool IstPublisher { get; set; }
+
+        public bool IstMindestalter { get; set; }
+
+        public bool IstPreis { get; set; }
+
+        public bool IstBewertung { get; set; }
+
+        public bool IstDatum { get; set; }
+
+        public bool NameValidieren(string name)
         {
             if(name.Length > 3 && name.Length < 30)
             {
@@ -17,7 +29,7 @@ namespace M120Projekt.Helpers
             return false;
         }
 
-        public static bool PublisherValidieren(string publisher)
+        public bool PublisherValidieren(string publisher)
         {
             if(publisher.Length > 3 && publisher.Length < 30)
             {
@@ -26,7 +38,16 @@ namespace M120Projekt.Helpers
             return false;
         }
 
-        public static bool MindestalterValidieren(string mindestalter)
+        public bool DatumValidieren(System.Windows.Controls.DatePicker datePicker)
+        {
+            if(datePicker.SelectedDate != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool MindestalterValidieren(string mindestalter)
         {
             try
             {
@@ -43,12 +64,12 @@ namespace M120Projekt.Helpers
             }
         }
 
-        public static bool PreisValidieren(string preis)
+        public bool PreisValidieren(string preis)
         {
             try
             {
                 double preisCheck = Convert.ToDouble(preis);
-                System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(@"(\d+\.\d{1,2})");
+                System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(@"^[0-9]*(?:\.[0-9]{1,2})?$");
                 System.Text.RegularExpressions.Match match = regex.Match(preis);
                 if (match.Success)
                 {
@@ -62,7 +83,16 @@ namespace M120Projekt.Helpers
             }
         }
 
-        public static bool BewertungValidieren(string bewertung)
+        public bool Prüfen()
+        {
+            if(IstBewertung && IstDatum && IstMindestalter && IstName && IstPreis && IstPublisher)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool BewertungValidieren(string bewertung)
         {
             try
             {

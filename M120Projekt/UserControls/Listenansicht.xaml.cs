@@ -25,13 +25,14 @@ namespace M120Projekt.UserControls
         {
             InitializeComponent();
             MainWindow.Label.Content = "Listenansicht";
+            MainWindow.Zustand = MainWindow.Zustände.List;
             Data.Global.context = new Data.Context();
             fillList();
         }
 
         public void fillList()
         {
-            List<Spiel> games = API.getAllGames();
+            List<Spiel> games = API.GetAllGames();
             listGames.ItemsSource = games;
         }
 
@@ -40,6 +41,8 @@ namespace M120Projekt.UserControls
             ListBox list = sender as ListBox;
             if(list.SelectedItem != null)
             {
+                Spiel spiel = (Spiel)list.SelectedItem;
+                MainWindow.AktuelleId = spiel.Id;
                 MainWindow.UCContainer.Children.Remove(this);
                 MainWindow.UCContainer.Children.Add(new Einzelansicht());
             }

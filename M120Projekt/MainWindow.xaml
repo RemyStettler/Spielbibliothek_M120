@@ -5,19 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M120Projekt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="695" Width="742"
+        Title="MainWindow" Height="606.5" Width="919"
         xmlns:controls="clr-namespace:M120Projekt.UserControls">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ResourceDictionarys/Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="6*"/>
         </Grid.RowDefinitions>
-        <DockPanel Grid.Row="0">
-            <Button x:Name="backButton" Content="Back" Width="50" Height="50" Margin="20"></Button>
-            <Label x:Name="lblHeader" Content="" DockPanel.Dock="Left" VerticalAlignment="Center" FontSize="24" Margin="30 5"/>
-        </DockPanel>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button x:Name="backButton" Background="LightBlue" Style="{StaticResource buttonStyle}" Content="&#x2190;" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30 0" Click="BackButton_Click">
+            </Button>
+            <Border Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource tableLine}"></Border>
+            <Label x:Name="lblHeader" Content="" VerticalAlignment="Center" FontSize="24" HorizontalAlignment="Center" Margin="30 0"/>
+        </StackPanel>
         <Grid x:Name="usercontrolContainer" Grid.Row="1" Background="LightGray" Margin="30">
-            
+
         </Grid>
     </Grid>
 </Window>

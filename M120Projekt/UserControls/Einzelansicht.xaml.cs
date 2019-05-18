@@ -15,15 +15,48 @@ using System.Windows.Shapes;
 
 namespace M120Projekt.UserControls
 {
+    using Data;
+    using Helpers;
     /// <summary>
     /// Interaktionslogik für Einzelansicht.xaml
     /// </summary>
     public partial class Einzelansicht : UserControl
     {
+        private Spiel spiel { get; set; }
         public Einzelansicht()
         {
             InitializeComponent();
             MainWindow.Label.Content = "Einzelansicht";
+            MainWindow.Zustand = MainWindow.Zustände.Detail;
+            MainWindow.BackButton.Visibility = Visibility.Visible;
+            DatenFüllen();
+        }
+
+        private void DatenFüllen()
+        {
+            spiel = API.GetGameById(MainWindow.AktuelleId);
+            container.DataContext = spiel;
+            //lblName.Content = spiel.Name;
+            //lblPublisher.Content = spiel.Publisher;
+            //lblErscheinung.Content = DatumGenerieren(spiel.Erscheinungsdatum);
+            //lblMindestalter.Content = spiel.Mindestalter.ToString();
+            //lblPreis.Content = spiel.Preis.ToString();
+            //lblBewertung.Content = spiel.Bewertung.ToString();
+            //lblSteam.Content = CheckBoxConverter(spiel.IstSteam);
+        }
+
+        private string CheckBoxConverter(bool istSteam)
+        {
+            if(istSteam)
+            {
+                return "Ja";
+            }
+            return "Nein";
+        }
+
+        private string DatumGenerieren(DateTime date)
+        {
+            return date.Date.ToString("d");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -37,6 +70,7 @@ namespace M120Projekt.UserControls
             MessageBoxResult dialog = MessageBox.Show("Dieses Element wirklich Löschen?", "Endgültig löschen?", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if(dialog == MessageBoxResult.Yes)
             {
+                API.DeleteGame(MainWindow.AktuelleId);
                 MainWindow.UCContainer.Children.Remove(this);
                 MainWindow.UCContainer.Children.Add(new Listenansicht());
             }

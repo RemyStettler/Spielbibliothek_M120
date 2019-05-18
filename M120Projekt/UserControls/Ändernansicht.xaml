@@ -6,8 +6,20 @@
              xmlns:local="clr-namespace:M120Projekt.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ResourceDictionarys/Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid>
-        <Grid Grid.Row="1" Width="500" Height="400" VerticalAlignment="Top">
+        <Grid x:Name="container" Grid.Row="1" VerticalAlignment="Center" Margin="100 0" Height="400">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
@@ -16,49 +28,46 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
-            <StackPanel Margin="5" Grid.Row="0" Orientation="Horizontal">
-                <Label Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtName" Text="Tom Clancy's Rainbow Six Siege" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
-            </StackPanel>
+            <Label Grid.Row="0" Grid.Column="0" Content="Name:"/>
+            <TextBox x:Name="txtName" Grid.Row="0" Grid.Column="1" Width="200" MaxWidth="300" MaxLength="30" Text="{Binding Name}" TextChanged="TxtName_TextChanged"/>
 
-            <StackPanel Margin="5" Grid.Row="1" Orientation="Horizontal">
-                <Label Content="Publisher:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtPublisher" Text="Ubisoft" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
-            </StackPanel>
-            <StackPanel Margin="5" Grid.Row="2" Orientation="Horizontal">
-                <Label Content="Bild-Pfad:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtBildPfad" Text="NULL" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
-            </StackPanel>
+            <Border Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource tableLine}"></Border>
 
-            <StackPanel Margin="5" Grid.Row="3" Orientation="Horizontal">
-                <Label Content="Erscheinungsdatum:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtErscheinungsdatum" Text="2015" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
-            </StackPanel>
+            <Label Grid.Row="1" Grid.Column="0" Content="Publisher:"/>
+            <TextBox x:Name="txtPublisher" Grid.Row="1" Grid.Column="1" Width="200" MaxWidth="300" MaxLength="30" Text="{Binding Publisher}" TextChanged="TxtPublisher_TextChanged"/>
 
-            <StackPanel Margin="5" Grid.Row="4" Orientation="Horizontal">
-                <Label Content="Mindestalter:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtMindestalter" Text="18" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
-            </StackPanel>
+            <Border Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource tableLine}"></Border>
 
-            <StackPanel Margin="5" Grid.Row="5" Orientation="Horizontal">
-                <Label Content="Preis:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtPreis" Text="77.99 CHF" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
-            </StackPanel>
+            <Label Grid.Row="2" Grid.Column="0" Content="Erscheinungsdatum:" />
+            <DatePicker x:Name="dateErscheinung" BorderBrush="Turquoise" BorderThickness="2" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" SelectedDate="{Binding Erscheinungsdatum}" CalendarClosed="DateErscheinung_CalendarClosed"/>
 
-            <StackPanel Margin="5" Grid.Row="6" Orientation="Horizontal">
-                <Label Content="Steam:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <CheckBox x:Name="checkSteam" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
-            <StackPanel Margin="5" Grid.Row="7" Orientation="Horizontal">
-                <Label Content="Bewertung:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtSterne" Text="5 Sterne" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Padding="5"/>
-            </StackPanel>
-            <DockPanel Margin="5" Grid.Row="8">
-                <Button Content="Speichern" HorizontalAlignment="Left" Width="70" Click="ButtonSave_Click"></Button>
-                <Button Content="Abbrechen" HorizontalAlignment="Right" Width="70" Click="Button_Click"/>
+            <Border Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource tableLine}"></Border>
+
+            <Label Grid.Row="3" Grid.Column="0" Content="Mindestalter:"/>
+            <TextBox x:Name="txtMindestalter" Grid.Row="3" Grid.Column="1" Width="200" MaxLength="2" Text="{Binding Mindestalter}" TextChanged="TxtMindestalter_TextChanged"/>
+
+            <Border Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource tableLine}"></Border>
+
+            <Label Grid.Row="4" Grid.Column="0" Content="Preis:" />
+            <TextBox x:Name="txtPreis" Grid.Row="4" Grid.Column="1" Width="200" MaxWidth="300" MaxLength="30" Text="{Binding Preis}" TextChanged="TxtPreis_TextChanged"/>
+
+            <Border Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource tableLine}"></Border>
+
+
+            <Label Grid.Row="5" Grid.Column="0" Content="Steam:" />
+            <CheckBox x:Name="checkSteam" Grid.Row="5" Grid.Column="1" Content="Ja" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding IstSteam}"/>
+
+            <Border Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource tableLine}"></Border>
+
+            <Label Grid.Row="6" Grid.Column="0" Content="Bewertung:" />
+            <TextBox x:Name="txtBewertung" Grid.Row="6" Grid.Column="1" Width="200" MaxLength="1" Text="{Binding Bewertung}" TextChanged="TxtBewertung_TextChanged"/>
+
+            <Border Grid.Row="6" Grid.ColumnSpan="2" Style="{StaticResource tableLine}"></Border>
+            <DockPanel Margin="5" Grid.Row="7" Grid.ColumnSpan="2">
+                <Button x:Name="btnSave" Style="{StaticResource buttonStyle}" Background="Green" Content="&#x1f4be;" HorizontalAlignment="Left" Width="70" Click="btnSave_Click"></Button>
+                <Button x:Name="btnAbbrechen" Style="{StaticResource buttonStyle}" Background="Red" Content="&#x2716;" HorizontalAlignment="Right" Width="70" Click="btnAbbrechen_Click"/>
             </DockPanel>
         </Grid>
     </Grid>

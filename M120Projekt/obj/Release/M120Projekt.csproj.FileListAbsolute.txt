@@ -1,0 +1,17 @@
+C:\120\M120Projekt\M120Projekt\obj\Release\M120Projekt.csprojAssemblyReference.cache
+C:\120\M120Projekt\M120Projekt\obj\Release\MainWindow.g.cs
+C:\120\M120Projekt\M120Projekt\obj\Release\UserControls\Einzelansicht.g.cs
+C:\120\M120Projekt\M120Projekt\obj\Release\UserControls\Listenansicht.g.cs
+C:\120\M120Projekt\M120Projekt\obj\Release\UserControls\Neuansicht.g.cs
+C:\120\M120Projekt\M120Projekt\obj\Release\UserControls\Ändernansicht.g.cs
+C:\120\M120Projekt\M120Projekt\obj\Release\App.g.cs
+C:\120\M120Projekt\M120Projekt\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\120\M120Projekt\M120Projekt\obj\Release\M120Projekt_MarkupCompile.cache
+C:\120\M120Projekt\M120Projekt\obj\Release\M120Projekt_MarkupCompile.lref
+C:\120\M120Projekt\M120Projekt\obj\Release\MainWindow.baml
+C:\120\M120Projekt\M120Projekt\obj\Release\ResourceDictionarys\Style.baml
+C:\120\M120Projekt\M120Projekt\obj\Release\UserControls\Listenansicht.baml
+C:\120\M120Projekt\M120Projekt\obj\Release\UserControls\Neuansicht.baml
+C:\120\M120Projekt\M120Projekt\obj\Release\UserControls\Ändernansicht.baml
+C:\120\M120Projekt\M120Projekt\obj\Release\M120Projekt.exe
+C:\120\M120Projekt\M120Projekt\obj\Release\M120Projekt.pdb

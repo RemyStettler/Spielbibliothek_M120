@@ -27,6 +27,10 @@ namespace M120Projekt
 
         public static Grid UCContainer { get; set; }
         public static Button BackButton { get; set; }
+
+        public static Zustände Zustand { get; set; }
+
+        public static long AktuelleId { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -35,6 +39,9 @@ namespace M120Projekt
             Label = lblHeader;
             UCContainer = usercontrolContainer;
             UCContainer.Children.Add(new Listenansicht());
+            Zustand = Zustände.List;
+            BackButton = backButton;
+            BackButton.Visibility = Visibility.Hidden;
             //Aufruf diverse APIDemo Methoden
             //API.DemoACreate();
             //APIDemo.DemoACreateKurz();
@@ -44,9 +51,35 @@ namespace M120Projekt
             //APIDemo.DemoADelete();
         }
 
-        private void BtnEvent_Click(object sender, RoutedEventArgs e)
+        public enum Zustände
         {
+            List,
+            Detail,
+            Ändern,
+            Neu,
+        }
 
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            switch(Zustand)
+            {
+                case Zustände.Detail:
+                    UCContainer.Children.Clear();
+                    UCContainer.Children.Add(new Listenansicht());
+                    BackButton.Visibility = Visibility.Hidden;
+                    break;
+
+                case Zustände.Neu:
+                    UCContainer.Children.Clear();
+                    UCContainer.Children.Add(new Listenansicht());
+                    BackButton.Visibility = Visibility.Hidden;
+                    break;
+
+                case Zustände.Ändern:
+                    UCContainer.Children.Clear();
+                    UCContainer.Children.Add(new Einzelansicht());
+                    break;
+            }
         }
     }
 }

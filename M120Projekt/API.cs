@@ -10,24 +10,29 @@ namespace M120Projekt
     using Data;
     static class API
     {
-        public static List<Spiel> getAllGames()
+        public static List<Spiel> GetAllGames()
         {
             return Spiel.LesenAlle().ToList();
         }
 
-        public static Spiel getGameById(long id)
+        public static Spiel GetGameById(long id)
         {
             return Spiel.LesenID(id);
         }
 
-        public static List<Spiel> getGameSame(string filter)
+        public static List<Spiel> GetGameSame(string filter)
         {
             return Spiel.LesenAttributGleich(filter).ToList();
         }
 
-        public static List<Spiel> getGameLike(string filter)
+        public static List<Spiel> GetGameLike(string filter)
         {
             return Spiel.LesenAttributWie(filter).ToList();
+        }
+
+        public static void DeleteGame(long id)
+        {
+            Spiel.LesenID(id).Loeschen();
         }
         // Create
         public static void DemoACreate()
