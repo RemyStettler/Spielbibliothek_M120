@@ -70,7 +70,7 @@
             <Grid Margin="5" Grid.Row="7" Grid.ColumnSpan="2">
                 <Button x:Name="btnNeu" Background="Green" Style="{StaticResource buttonStyle}" Content="&#x2714;" HorizontalAlignment="Left" Width="70" Click="BtnNeu_Click"></Button>
                 <Button x:Name="btnAbbrechen" Background="Red" Style="{StaticResource buttonStyle}" Content="&#x2716;" HorizontalAlignment="Right" Width="70" Click="Button_Click_1"/>
-                <Button x:Name="btnLeeren" Background="LightYellow" Style="{StaticResource buttonStyle}" Content="Felder Leeren" HorizontalAlignment="Center" Width="80" Click="Button_Click"/>
+                <Button x:Name="btnLeeren" Background="LightYellow" Style="{StaticResource buttonStyle}" Content="Clear" HorizontalAlignment="Center" Width="80" Click="Button_Click"/>
             </Grid>
         </Grid>
     </Grid>

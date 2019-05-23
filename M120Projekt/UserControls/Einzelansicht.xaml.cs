@@ -73,6 +73,7 @@ namespace M120Projekt.UserControls
                 API.DeleteGame(MainWindow.AktuelleId);
                 MainWindow.UCContainer.Children.Remove(this);
                 MainWindow.UCContainer.Children.Add(new Listenansicht());
+                MainWindow.BackButton.Visibility = Visibility.Hidden;
             }
         }
     }
