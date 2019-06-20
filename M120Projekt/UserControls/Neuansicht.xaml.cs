@@ -35,6 +35,7 @@ namespace M120Projekt.UserControls
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             MainWindow.UCContainer.Children.Remove(this);
+            MainWindow.BackButton.Visibility = Visibility.Hidden;
             MainWindow.UCContainer.Children.Add(new Listenansicht());
         }
 

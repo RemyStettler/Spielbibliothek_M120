@@ -26,7 +26,10 @@
                     <StackPanel Margin="10" Orientation="Vertical">
                         <TextBlock Text="{Binding Path=Name}" FontSize="20" Margin="5"></TextBlock>
                         <TextBlock Text="{Binding Path=Publisher}" Margin="5"></TextBlock>
-                        <TextBlock Text="{Binding Path=Preis}" Margin="5"></TextBlock>
+                        <StackPanel Margin="5" Orientation="Horizontal">
+                            <TextBlock Text="CHF"></TextBlock>
+                            <TextBlock Text="{Binding Path=Preis}" Margin="5 0 0 0"></TextBlock>
+                        </StackPanel>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

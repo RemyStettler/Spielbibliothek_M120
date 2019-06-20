@@ -38,13 +38,13 @@ C:\Users\vmadmin\Desktop\M120\M120Projekt\M120Projekt\obj\Debug\M120Projekt.cspr
 C:\Users\vmadmin\Desktop\M120\M120Projekt\M120Projekt\obj\Debug\M120Projekt.csproj.CopyComplete
 C:\Users\vmadmin\Desktop\M120\M120Projekt\M120Projekt\obj\Debug\M120Projekt.exe
 C:\Users\vmadmin\Desktop\M120\M120Projekt\M120Projekt\obj\Debug\M120Projekt.pdb
-C:\120\M120Projekt\M120Projekt\obj\Debug\M120Projekt.csprojAssemblyReference.cache
 C:\120\M120Projekt\M120Projekt\obj\Debug\MainWindow.g.cs
 C:\120\M120Projekt\M120Projekt\obj\Debug\UserControls\Einzelansicht.g.cs
 C:\120\M120Projekt\M120Projekt\obj\Debug\UserControls\Listenansicht.g.cs
 C:\120\M120Projekt\M120Projekt\obj\Debug\UserControls\Neuansicht.g.cs
 C:\120\M120Projekt\M120Projekt\obj\Debug\UserControls\Ändernansicht.g.cs
 C:\120\M120Projekt\M120Projekt\obj\Debug\App.g.cs
+C:\120\M120Projekt\M120Projekt\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\120\M120Projekt\M120Projekt\obj\Debug\M120Projekt_MarkupCompile.cache
 C:\120\M120Projekt\M120Projekt\obj\Debug\M120Projekt_MarkupCompile.lref
 C:\120\M120Projekt\M120Projekt\obj\Debug\MainWindow.baml
@@ -67,4 +67,4 @@ C:\120\M120Projekt\M120Projekt\obj\Debug\M120Projekt.Properties.Resources.resour
 C:\120\M120Projekt\M120Projekt\obj\Debug\M120Projekt.csproj.GenerateResource.cache
 C:\120\M120Projekt\M120Projekt\obj\Debug\M120Projekt.csproj.CoreCompileInputs.cache
 C:\120\M120Projekt\M120Projekt\obj\Debug\M120Projekt.csproj.CopyComplete
-C:\120\M120Projekt\M120Projekt\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\120\M120Projekt\M120Projekt\obj\Debug\M120Projekt.csprojAssemblyReference.cache
